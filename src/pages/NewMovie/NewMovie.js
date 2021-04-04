@@ -1,6 +1,11 @@
+import MovieForm from "../../components/MovieForm/MovieForm";
+
 const NewMovie = () => {
     return (
-        <h2>New Movie Page</h2>
+        <div className="NewMovie">
+            <h2>New Movie Page</h2>
+            <MovieForm />
+        </div>
     );
 }
  
