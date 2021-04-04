@@ -1,0 +1,27 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: purple;
+}
+
+.Header-h1 {
+    color: white;
+    margin-left: 30px;
+}
+
+.Header ul {
+    display: flex;
+    justify-content: space-around;
+    width: 30vw;
+}
+
+.Header-link {
+    text-decoration: none;
+    list-style-type: none;
+    color: whitesmoke;
+}
+
+.Header-link:hover {
+    color: blue;
+}
