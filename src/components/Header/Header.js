@@ -16,9 +16,6 @@ const Header = () => {
                     <Link className='Header-link' to='/watchlist'>
                         <li>Watch List</li>
                     </Link>
-                    <Link className='Header-link' to='/new'>
-                        <li>New</li>
-                    </Link>
                 </ul>
             </nav>
         </header>
