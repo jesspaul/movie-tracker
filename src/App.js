@@ -5,6 +5,7 @@ import Watched from './pages/Watched/Watched';
 import WatchList from './pages/WatchList/WatchList';
 import NewMovie from './pages/NewMovie/NewMovie';
 import { Route, Switch } from 'react-router-dom';
+import WatchedContextProvider from './contexts/WatchedContext';
 
 function App() {
   return (
@@ -15,13 +16,17 @@ function App() {
           <Home />
         } />
         <Route path='/watched' render={(props) => 
-          <Watched />
+          <WatchedContextProvider>
+            <Watched />
+          </WatchedContextProvider>
         } />
         <Route path='/watchlist' render={(props) => 
           <WatchList />
         } />
         <Route path='/new' render={(props) => 
+          <WatchedContextProvider>
           <NewMovie />
+        </WatchedContextProvider>
         } />
       </Switch>
     </div>
