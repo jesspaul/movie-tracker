@@ -4,7 +4,7 @@ export const WatchedReducer = (state, action) => {
             return [...state, {
                 title: action.movie.title
             }];
-        case 'REMOVE_BOOK':
+        case 'REMOVE_MOVIE':
             return state.filter((movie, idx) => idx !== action.idx);
         default:
             return state;
