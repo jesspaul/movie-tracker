@@ -6,6 +6,7 @@ import WatchList from './pages/WatchList/WatchList';
 import NewMovie from './pages/NewMovie/NewMovie';
 import { Route, Switch } from 'react-router-dom';
 import WatchedContextProvider from './contexts/WatchedContext';
+import SearchResultsContextProvider from './contexts/SearchResultsContext';
 
 function App() {
   return (
@@ -25,7 +26,9 @@ function App() {
         } />
         <Route path='/new' render={(props) => 
           <WatchedContextProvider>
-          <NewMovie />
+            <SearchResultsContextProvider>
+              <NewMovie />
+            </SearchResultsContextProvider>
         </WatchedContextProvider>
         } />
       </Switch>

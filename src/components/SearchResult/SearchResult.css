@@ -1,0 +1,17 @@
+.SearchResult {
+    display: inline-block;
+    width: 20%;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+}
+
+.title, .year {
+    display: inline;
+}
+
+.poster {
+    width: 75%;
+}
