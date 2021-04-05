@@ -20,12 +20,16 @@ const SearchResult = ({ movie, history }) => {
     return (
         <div className="SearchResult">
             <div className="result">
+                <div className="details">
+                    <h3 className='title'>{movie.Title}</h3>
+                    <p className='year'>{movie.Year}</p>
+                    <p className='rating'>{movie.Rated}</p>
+                    <p className='actors'>{movie.Actors}</p>
+                    <form onSubmit={handleSubmit}>
+                        <input type="submit" value="+ Add to Watched List"/>
+                    </form>
+                </div>
                 <img className='poster' src={movie.Poster} alt={`movie poster for ${movie.Title}`} />
-                <h3 className='title'>{movie.Title}</h3>
-                <p className='year'>{movie.Year}</p>
-                <form onSubmit={handleSubmit}>
-                    <input type="submit" value="+ Add to Watched List"/>
-                </form>
             </div>
         </div>
     );
