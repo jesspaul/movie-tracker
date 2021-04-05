@@ -1,12 +1,12 @@
 import MovieForm from "../../components/MovieForm/MovieForm";
 import SearchResults from "../../components/SearchResults/SearchResults";
 
-const NewMovie = () => {
+const NewMovie = (props) => {
     return (
         <div className="NewMovie">
             <h2>New Movie Page</h2>
             <MovieForm />
-            <SearchResults />
+            <SearchResults props={{...props}} />
         </div>
     );
 }

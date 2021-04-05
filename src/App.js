@@ -27,7 +27,7 @@ function App() {
         <Route path='/new' render={(props) => 
           <WatchedContextProvider>
             <SearchResultsContextProvider>
-              <NewMovie />
+              <NewMovie {...props}/>
             </SearchResultsContextProvider>
         </WatchedContextProvider>
         } />

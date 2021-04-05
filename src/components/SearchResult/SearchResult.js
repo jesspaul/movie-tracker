@@ -1,9 +1,9 @@
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { WatchedContext } from '../../contexts/WatchedContext';
 import './SearchResult.css';
 
-const SearchResult = ({ movie }) => {
+const SearchResult = ({ movie, history }) => {
     const { dispatch } = useContext(WatchedContext);
 
     const handleSubmit = (evt) => {
@@ -14,6 +14,7 @@ const SearchResult = ({ movie }) => {
             title: movie.Title
                 }
             });
+        history.push('/watched');
     }
 
     return (
@@ -22,14 +23,12 @@ const SearchResult = ({ movie }) => {
                 <img className='poster' src={movie.Poster} alt={`movie poster for ${movie.Title}`} />
                 <h3 className='title'>{movie.Title}</h3>
                 <p className='year'>{movie.Year}</p>
-                {/* <Link to='/watched'> */}
-                    <form onSubmit={handleSubmit}>
-                        <input type="submit" value="+ Add to Watched List"/>
-                    </form>
-                {/* </Link> */}
+                <form onSubmit={handleSubmit}>
+                    <input type="submit" value="+ Add to Watched List"/>
+                </form>
             </div>
         </div>
     );
 }
  
-export default SearchResult;
+export default withRouter(SearchResult);
