@@ -11,15 +11,11 @@ const MovieForm = () => {
 
     async function getMovieData(searchTitle) {
         const data = await searchMovie(searchTitle);
-        console.log(data);
         setSearchResults([...data.Search]);
     }
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        dispatch({type: 'ADD_MOVIE', movie: {
-            title
-        }});
         getMovieData(title);
         setTitle('');
     }
